@@ -51,13 +51,13 @@
                     $response["message"] = "Close contact established successfully.";
                     echo json_encode($response);
                 } else {
-                    $response["success"] = 0;
+                    $response["success"] = 3;
                     $response["message"] = mysqli_error($con);
                     echo json_encode($response);
                 }
             }
         } else {
-            $response["success"] = 0;
+            $response["success"] = 3;
             $response["message"] = mysqli_error($con);
             echo json_encode($response);
         }
@@ -66,7 +66,7 @@
         $con->close();
 
     } else {
-        $response["success"] = 0;
+        $response["success"] = 3;
         $response["message"] = "Missing required values.";
         echo json_encode($response);
     }
